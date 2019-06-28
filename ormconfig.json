@@ -1,9 +1,10 @@
 {
    "type": "mssql",
    "host": "localhost",
-   "username": "sa",
-   "password": "Admin12345",
-   "database": "tempdb",
+   "port": 1433,
+   "username": "mhchan2018",
+   "password": "4enMI7RCjRPRaw",
+   "database": "airbnb",
    "synchronize": true,
    "logging": false,
    "entities": [

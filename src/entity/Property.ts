@@ -11,16 +11,16 @@ export class Property {
     @Column()
     address: string;
 
-    @Column()
+    @Column({name: "num_rooms"})
     numRooms: number;
 
     @Column()
     price: number;
 
-    @Column()
+    @Column({name: "allow_smoking"})
     allowSmoking: boolean;
 
-    @Column()
+    @Column({name: "max_guest_num"})
     maxGuestNum: number;
 
     @OneToMany(type => Booking, booking => booking.property)
