@@ -1,7 +1,8 @@
-import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToMany} from "typeorm";
 import { Booking } from "./Booking";
+import { Community } from "./Community";
 
-@Entity()
+@Entity({name: "users"})
 export class User {
 
     @PrimaryGeneratedColumn()
@@ -22,4 +23,6 @@ export class User {
     @OneToMany(type => Booking, booking => booking.user)
     bookings: Booking[]
 
+    @ManyToMany(type => Community, community => community.users)
+    communities: Community[]
 }
